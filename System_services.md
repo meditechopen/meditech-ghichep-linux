@@ -1,6 +1,22 @@
 # System services
 
-Systemd là một init system mới cho các bản phân phối gần đây của Linux, nó thay thế cho init cũ `/etc/init.d/scipts` . Systemd cung cấp nhiều tính năng mạnh mẽ trong việc khởi chạy, kết thúc và quản lí các tiến trình. Dưới đây là một ví dụ về việc cài đặt MineCraft service cho systemd. MineCraft là một trò chơi được lập trình từ ngôn ngữ Java và được phát hành bởi Mojang.
+Systemd là một init system mới cho các bản phân phối gần đây của Linux, nó thay thế cho init cũ `/etc/init.d/scripts` . 
+
+Init process là một tiến trình được khởi động lên đầu tiên trong hệ thống Linux. Tức là sau khi bạn chọn hệ điều hành trong menu của Boot Loader. Hệ điều hành bắt đầu được khởi động và tiến trình đầu tiên khởi động lên là init. Nhiệm vụ của init là start và stop các process, services… cần thiết khác.
+
+Có ba kiểu triển khai init system chính trong hệ thống Linux là:
+
+- System V : là phiên bản truyền thống của init system trên nhiều hệ thống Linux.
+- Upstart: Được phát triển bởi Canonical vào khoảng năm 2009 và sử dụng trong các phiên bản Ubuntu cũ hơn bản 15.04.
+- Systemd: Là một init system được phát triển khoảng năm 2010 và được nhiều Linux distributions sử dụng để thay thế các init system cũ. Ubuntu từ phiên bản 15.04 và Centos từ phiên bản 7 đã sử dụng systemd làm init system mặc định.
+
+Dưới đây là bảng so sánh sysv và systemd
+
+<img src="http://i.imgur.com/2FLLl2j.jpg">
+
+Click vào [đây](http://images.linoxide.com/systemd-vs-sysVinit-cheatsheet.jpg) để xem ảnh gốc. 
+
+Systemd cung cấp nhiều tính năng mạnh mẽ trong việc khởi chạy, kết thúc và quản lí các tiến trình. Dưới đây là một ví dụ về việc cài đặt MineCraft service cho systemd. MineCraft là một trò chơi được lập trình từ ngôn ngữ Java và được phát hành bởi Mojang.
 
 Đầu tiên cần cài đặt game và môi trường để chạy nó:
 
