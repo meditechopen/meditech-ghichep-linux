@@ -18,12 +18,9 @@ Cả hai hệ thống quản lý gói cung cấp hai cấp công cụ: một cô
 |--------------|-------|-----------|
 |Cài đặt một gói |rpm –i foo.rpm |dpkg --install foo.deb |
 |Cài đặt một gói với phụ thuộc từ kho lưu trữ |yum install foo |apt-get install foo |
-|Loại bỏ một gói |rpm –e foo.rpm |dpkg --remove foo.deb
- |
+|Loại bỏ một gói |rpm –e foo.rpm |dpkg --remove foo.deb|
 |Loại bỏ một gói và phụ thuộc bằng cách sử dụng kho |yum remove foo |apt-get remove foo |
-|Cập nhật gói lên phiên bản mới hơn
- |rpm –U foo.rpm |dpkg --install foo.deb
- |
+|Cập nhật gói lên phiên bản mới hơn|rpm –U foo.rpm |dpkg --install foo.deb|
 |Cập nhật gói sử dụng kho lưu trữ và giải quyết các sự phụ thuộc |yum update foo |apt-get upgrade foo |
 |yum update foo |yum update foo |apt-get dist-upgrade |
 |Hiển thị tất cả gói đã cài đặt |yum list installed |dpkg --list |
