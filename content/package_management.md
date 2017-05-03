@@ -27,5 +27,5 @@ Cả hai hệ thống quản lý gói cung cấp hai cấp công cụ: một cô
 |Nhận thông tin về một gói cài đặt bao gồm các tệp rpm |rpm –qil foo |rpm –qil foo |
 |Nhận thông tin về một gói cài đặt bao gồm các tệp |rpm –qil foo |dpkg --listfiles foo |
 |Hiển thị gói có sẵn với "foo" trong tên |yum list foo |apt-cache search foo |
-|Hiển thị tất cả các gói có sẵn |Hiển thị tất cả các gói có sẵn | apt-cache dumpavail|
-|Hiển thị gói một tập tin thuộc về| Hiển thị gói một tập tin thuộc về|rpm –qf file |dpkg --search file |
+|Hiển thị tất cả các gói có sẵn |yum list| apt-cache dumpavail|
+|Hiển thị gói một tập tin thuộc về|rpm –qf file |dpkg --search file |
