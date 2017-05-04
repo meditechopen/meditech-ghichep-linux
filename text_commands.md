@@ -1,4 +1,4 @@
-# Text commands
+# 18. Text commands
 
 Linux cung cấp sẵn một vài các tiện ích cho việc chỉnh sửa văn bản
 

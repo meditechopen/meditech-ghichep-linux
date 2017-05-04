@@ -1,4 +1,4 @@
-# Samba server and Windows file sharing
+# 21. Samba server and Windows file sharing
 
 Samba là một hệ thống xử lí mã nguồn mở sử dụng giao thức SMB/CIFS. Nó cho phép các máy chủ  Microsoft Windows®, Linux, UNIX, và các hệ điều hành khác kết nối với nhau. Sử dụng Samba, các máy chủ Linux/Unix có thể trở thành Windows server đối với các máy Windows clients.
 

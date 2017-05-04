@@ -1,4 +1,4 @@
-# Bash shell programming
+# 19. Bash shell programming
 
 - Shell là trình biên dịch của Linux, nó cung cấp giao diện cho người dùng. Mỗi lệnh bạn gõ ra sẽ được Shell diễn dịch rồi chuyển tới nhân Linux. Nói một cách dễ hiểu Shell là bộ diễn dịch ngôn ngữ lệnh. Ngoài ra nó cũng được dùng để chạy các scripts ngay cả với những phiên làm việc không có cửa sổ giao diện, như thể các câu lệnh đã được gõ vào trực tiếp.
 
@@ -176,7 +176,7 @@ then
 else
        statements
 fi
-``` 
+```
 
 Chương trình dưới đây sẽ check các câu lệnh của file, nếu nó tồn tại, màn hình sẽ hiển thị thông báo
 
@@ -194,17 +194,17 @@ The  /etc/passwd  contains  35  lines.
 
 Bảng dưới đây mô tả các tùy chọn dùng để check file
 
-|Option|Action|
-|------|------|
-|-e file|	Check xem file có tồn tại không.|
-|-d file|	Check xem file có phải là một thư mục hay không.|
-|-f file|	Check xem file có thường được sử dụng không.|
-|-s file|	Check xem file có thích thước khác 0 hay không.|
-|-g file|	Check xem file có tập sgid không.|
-|-u file|	Check xem file có tập suid không.|
-|-r file|	Check xem file có thể đọc được hay không.|
-|-w file|	Check xem file có thể viết được hay không.|
-|-x file|	Check xem file có thể thực thi (execute) được hay không|
+| Option  | Action                                   |
+| ------- | ---------------------------------------- |
+| -e file | Check xem file có tồn tại không.         |
+| -d file | Check xem file có phải là một thư mục hay không. |
+| -f file | Check xem file có thường được sử dụng không. |
+| -s file | Check xem file có thích thước khác 0 hay không. |
+| -g file | Check xem file có tập sgid không.        |
+| -u file | Check xem file có tập suid không.        |
+| -r file | Check xem file có thể đọc được hay không. |
+| -w file | Check xem file có thể viết được hay không. |
+| -x file | Check xem file có thể thực thi (execute) được hay không |
 
 Bạn cũng có thể dùng if để so sánh các chuỗi với nhau :
 
@@ -226,11 +226,11 @@ fi
 
 Một số các tùy chọn so sánh
 
-|Option|Action|
-|------|------|
-|-eq|Bằng nhau|
-|-ne|Không bằng nhau|
-|-gt|Lớn hơn|
-|-lt|Nhỏ hơn|
-|-ge|Lớn hơn hoặc bằng|
-|-le|Nhỏ hơn hoặc bằng|
+| Option | Action            |
+| ------ | ----------------- |
+| -eq    | Bằng nhau         |
+| -ne    | Không bằng nhau   |
+| -gt    | Lớn hơn           |
+| -lt    | Nhỏ hơn           |
+| -ge    | Lớn hơn hoặc bằng |
+| -le    | Nhỏ hơn hoặc bằng |
