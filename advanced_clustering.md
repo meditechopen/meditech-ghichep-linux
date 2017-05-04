@@ -1,6 +1,6 @@
 # 25. Advanced Clustering
 
-Linux clustering cung cấp rất nhiều các kĩ thuật để sử dụng hầu hết các thẻ loại cluster. Ở phần [Cluster Basic](), ta đã cài đặt hệ thống Active/Standby đơn giản. Ở phần này, chúng ta sẽ mở rộng hệ thống cũ để nó trở thành Active/Active cluster.
+Linux clustering cung cấp rất nhiều các kĩ thuật để sử dụng hầu hết các thẻ loại cluster. Ở phần [Cluster Basic](https://github.com/thaonguyenvan/meditech-ghichep-linux/blob/master/cluster_basics.md), ta đã cài đặt hệ thống Active/Standby đơn giản. Ở phần này, chúng ta sẽ mở rộng hệ thống cũ để nó trở thành Active/Active cluster.
 
 Ở hệ thống Active/Standby, stanby node gần như không có bất cứ nhiệm vụ gì. Vì vậy không có bất cứ dữ liệu gì được chia sẻ chung giữa cả hai, cũng bởi thế không có bất cứ sự nguy hiểm gì về việc hỏng dữ liệu. Node thứ 2 hoàn toàn có thể trở thành active node và tham gia vào các tác vụ để góp phần tăng hiệu suất của hệ thống. Để làm được điều này, chúng ta sẽ khiến HTTP Server chạy trên cả hai nodes và cài đặt Load Balancer trên cả hai node.
 
