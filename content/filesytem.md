@@ -106,8 +106,7 @@ Thư viện /lib chứa các thư viện (mã chung chung được chia sẻ b�
 |/usr/lib |Thư viện cho các chương trình nhị phân |
 |/usr/lib64 |Thư viện 64bit cho các chương trình nhị phân |
 |/usr/share |Dữ liệu chia sẻ được sử dụng bởi các ứng dụng, nói chung là kiến ​​trúc độc lập |
-|/usr/src |Mã nguồn, thường là cho nhân Linux
- |
+|/usr/src |Mã nguồn, thường là cho nhân Linux|
 |/usr/local |Dữ liệu và các chương trình cụ thể cho máy cục bộ. |
 
 # Bảng thư mục hệ thống
