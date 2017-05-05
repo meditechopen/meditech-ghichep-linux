@@ -26,9 +26,9 @@ $ ls -l test1
 
 Loại cú pháp này có thể khó gõ và ghi nhớ, do đó, một người thường sử dụng một phép viết tắt cho phép bạn thiết lập tất cả các điều khoản trong một bước. Điều này được thực hiện với một thuật toán đơn giản, và một chữ số duy nhất đủ để xác định tất cả ba bit quyền cho mỗi thực thể. Chữ số này là tổng của:
 
-- 4 nếu được phép đọc là mong muốn.
-- 2 nếu được phép ghi là mong muốn.
-- 1 nếu được phép thực thi là mong muốn.
+- 4 : được phép đọc .
+- 2 : được phép ghi.
+- 1 :được phép thực thi.
 
 Như vậy 7 có nghĩa là đọc + viết + thực thi, 6 có nghĩa là đọc + viết, và 5 có nghĩa là đọc + thực thi.
 
