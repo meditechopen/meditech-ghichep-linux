@@ -1,8 +1,8 @@
 # Sao lưu dữ liệu
 
-Lệnh rsync được sử dụng để đồng bộ hóa toàn bộ cây thư mục. Về cơ bản, nó sao chép tập tin như là lệnh cp làm. Ngoài ra, rsync kiểm tra nếu tập tin đang được sao chép đã tồn tại. Nếu tập tin tồn tại và không có thay đổi trong kích thước hoặc thời gian sửa đổi, rsync sẽ tránh một bản sao không cần thiết và tiết kiệm thời gian. Hơn nữa, vì rsync chỉ sao chép các phần của các tệp tin đã thay đổi thực sự, nó có thể rất nhanh.
+Lệnh rsync được sử dụng để đồng bộ hóa toàn bộ cây thư mục. Về cơ bản, nó sao chép tập tin như là lệnh cp làm. Ngoài ra, rsync kiểm tra nếu tập tin đang được sao chép đã tồn tại. Nếu tập tin tồn tại và không có thay đổi trong kích thước hoặc thời gian sửa đổi, rsync sẽ không tạo bản sao để tránh lãng phí thời gian. Hơn nữa, vì rsync chỉ sao chép các phần của các tệp tin đã thay đổi , vì thế tốc độ sao chép của nó rất nhanh
 
-Rsync là rất hiệu quả khi sao chép đệ quy một cây thư mục, bởi vì chỉ có sự khác biệt được truyền đi.Một cây thư mục đích thường được đồng bộ với nguyên bản, sử dụng tùy chọn rsync-r để đệ quy đi xuống cây thư mục sao chép tất cả các tệp và thư mục bên dưới tệp được liệt kê như nguồn.
+Rsync rất hiệu quả khi sao chép đệ quy một cây thư mục, vì nó chỉ sao chép những thứ khác biệt.Khi muốn đồng bộ một cách nguyên bản với cây thư mục gốc, sử dụng tùy chọn rsync-r để sao chép đệ quy tất cả các thư mục và các tệp tin như cây thư mục gốc :
 
 ```
 # rsync -ravzh project_ABC /data/backups
@@ -28,7 +28,7 @@ Dữ liệu tệp thường được nén để tiết kiệm không gian đĩa 
 | xz | Tiện ích nén không gian hiệu quả nhất được sử dụng trong Linux. Nó hiện được sử dụng bởi kernel.org để lưu trữ lưu trữ của hạt nhân Linux |
 | zip | Thường phải kiểm tra và giải nén lưu trữ từ các hệ điều hành khác |
 
-Những kỹ thuật này khác nhau về hiệu quả nén (bao nhiêu không gian được lưu) và nén trong bao lâu : Nói chung các kỹ thuật hiệu quả hơn sẽ mất thời gian hơn. Thời gian nén không thay đổi nhiều theo các phương pháp hác nhau .
+Những kỹ thuật này khác nhau về hiệu quả nén (dung lượng sau nén) và nén trong bao lâu : Nói chung các kỹ thuật hiệu quả hơn sẽ mất thời gian hơn. Thời gian nén không thay đổi nhiều theo các phương pháp hác nhau .
 
 # Lưu trữ dữ liệu
 

@@ -49,13 +49,13 @@ Lệnh tree là một cách hay để có một cái nhìn về cây thư mục 
 
 Lệnh ln có thể được dử dụng để tạo các liên kết cứng và liên kết mềm, còn được biết là các liên kết tượng trưng hoặc symlink. Hai loại liên kết này rất phổ biến trên hệ đều hành dựa trên UNIX.
 
-Giả sử răng file1.txt đã tồn tại. Một liên kết cứng, được gọi là file2.txt được tạo ra bằng lệnh :
+Giả sử răng file1.txt đã tồn tại. Tạo một liên kết cứng tên là file2.txt bằng lệnh :
 
 ```
 # ln file1.txt file2.txt
 ```
 
-Lưu ý rằng hiện tại 2 tệp tin đã tồn tại, một kiểm tra chặt chẽ hơn cho thấy rằng điều này không đúng :
+Lưu ý rằng hiện tại 2 tệp tin đã tồn tại, kiểm tra kỹ hơn thấy điều này không đúng :
 
 ```
 # ls -l file*
@@ -66,7 +66,7 @@ Lưu ý rằng hiện tại 2 tệp tin đã tồn tại, một kiểm tra chặ
 134415251 -rw-r--r--. 2 root root 604 Feb 16 11:49 file2.txt
 ```
 
-Tùy chọn -i sẽ in ra trong cột đầu tiên số i-node , cái mà là một số lượng duy nhất cho mỗi đối tượng tệp tin. Trường này giống nhau cho cả hai tệp tin. Những gì xảy ra ở đây là nó chỉ là một tệp tin nhưng nó có nhiều hơn một liên kết với nó, như được chỉ ra bởi 2 xuất bản trong đầu ra :
+Tùy chọn -i sẽ in ra số i-node trong cột đầu tiên, cái này là đối số duy nhất của mỗi tệp tin. Trường này cả hai tệp tin đều giống nhau. Chỉ có thể xảy ra trường hợp có 1 tệp tin nhưng lại có nhiều liên kết đến tệp tin đó nhưng đầu ra lại có 2 bản :
 
 ```
 # ln file1.txt file3.txt
@@ -89,8 +89,8 @@ Các liên kết tượng trưng hoặc mềm được tạo ra với tùy chọ
 134415252 lrwxrwxrwx. 1 root root   9 Feb 16 11:59 file4.txt -> file1.txt
 ```
 
-Thông báo file4.txt không còn xuất hiện như một tệp tin thường, và điểm rõ ràng đến file1 và có một số onide khác nhau. Các liên kết tượng trưng không chiếm thêm dung lượng trên hệ thống.Điều này rất thuận tiện vì chúng ta có thể chỉ đến những nơi khác nhau. Một cách dễ hơn để tạo ra một phím tắt từ thư mục chính đến thư mục gốc là tạo các liên kết tượng trưng.
+file4.txt không còn như những file khác, và điểm thấy rõ nhất là nó trỏ đến file1 và có số i-node khác biệt. Các liên kết tượng trưng không chiếm thêm dung lượng của ổ đĩa.Điều này rất thuận tiện vì chúng ta có thể  đến nhiều nơi khác nhau bằng cách tạo các liên kết tượng trưng từ thu mục bất kì đến thư mục không mà không làm tăng dung lượng thư mục đó.
 
-Không giống như các liên kết cứng, liên kết mềm có thể trỏ đến các đối tượng trên các file hệ thống khác nhau (hoặc phân vùng) co thể không có thể hiện hoặc thậm chí không tồn tại. Trong trường hơp này liên kết không trỏ đến đối tượng hiện tại có sẵn hoặc đối tượng hiện tại.
+Không giống như các liên kết cứng, liên kết mềm có thể trỏ đến các tệp tin khác nhau trong hệ thống (hoặc phân vùng) cho dù tệp tin đó có hay không.
 
-Liên kết cứng rất hữu ích và tiết kiệm không gian, nhưng bạn phải cẩn thận trong việc sử dụng,đôi khi cần phải tinh tế. Đối với 1 thứ nếu bạn muốn xóa bỏ file1.txt hoặc file2.txt trong ví dụ, đối tượng inode vẫn còn tồn tại, điều này là không mong muốn vì nó có thể dẫn đến các báo lỗi sai khi bạn tạo lại 1 tệp tin có tên đó. Nếu bạn chỉnh sửa một trong các tệp tin, những gì xảy ra sẽ phụ thuộc và trình soạn thảo văn bản của bạn. Hầu hết các công cụ biên tập như vi và gedit sẽ giữ liên kết theo mặc định nhưng xóc thể sửa đổi một trong những tên có thể làm hỏng liên kết và tạo ra 2 đối tượng.
+Liên kết cứng rất hữu ích và tiết kiệm không gian, nhưng phải cẩn thận trong việc sử dụng,đôi khi cần phải tinh tế. Nếu bạn muốn xóa bỏ file1.txt hoặc file2.txt trong ví dụ, đối tượng inode vẫn còn tồn tại, điều này là không mong muốn vì nó có thể dẫn đến các báo lỗi sai khi bạn tạo lại 1 tệp tin có tên đó. Nếu bạn chỉnh sửa một trong các tệp tin, kết quả sẽ phụ thuộc và trình soạn thảo văn bản của bạn. Hầu hết các công cụ biên tập như vi và gedit sẽ giữ liên kết theo mặc định nhưng có thể sửa đổi một trong những tên có thể làm hỏng liên kết và tạo ra 2 đối tượng.
